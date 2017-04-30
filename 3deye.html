@@ -9,102 +9,111 @@ Released under the MIT license: http://jsbin.mit-license.org
 -->
 <meta name="robots" content="noindex">
 <html>
+
 <head>
-<script src="./jquery.js"></script>
+  <script src="./jquery.js"></script>
   <meta charset="utf-8">
   <title>JS Bin</title>
-<style id="jsbin-css">
-.grandpa{
- display: flex;
-  align-items: center;
-  position: absolute;
-}
-.left{
-  width: 100px;
-  height: 100px;
-  background: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotateX(0deg) rotateY(0deg);
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
-  border-radius: 50%;
-  position:relative;
-  left:-345px;
-  top:20px;
-}
-.right{
-  width: 100px;
-  height: 100px;
-  background: #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotateX(0deg) rotateY(0deg);
-  transform-style: preserve-3d;
-  transition: transform 0.8s;
-  border-radius: 50%;
-  position:relative;
-  left:-310px;
-  top:20px;
-}
-
-.child{
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0.8;
-}
-#child1{
-  background: red;
-  width: 60px;
-  height: 60px;
-  transform: translateZ(20px);
-}
-#child2{
-  background: black;
-  width: 30px;
-  height: 30px;
-  transform: translateZ(30px);
-}
-#child3{
-  width: 10px;
-  height: 10px;
-  background: white;
-  transform: translateZ(35px);
-}
-</style>
-</head>
-<body>
-<div class="grandpa">
-<div class="back"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492686707520&di=f69672abd001fd412741690b474d255e&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%253D580%2Fsign%3D8f83c45a7af40ad115e4c7eb672d1151%2F6b600c338744ebf89fb4975dd8f9d72a6159a78f.jpg" alt=""></div>
-<div class="parent left">
-  <div class="child" id="child1"></div>
-  <div class="child" id="child2"></div>
-  <div class="child" id="child3"></div>
-</div>
-<div class="parent right">
-  <div class="child" id="child1"></div>
-  <div class="child" id="child2"></div>
-  <div class="child" id="child3"></div>
-</div>
-</div>  
-<script id="jsbin-javascript">
-  var x = 0
-  var y = 0
-  function step(){
-    $('.parent').css({
-       transform: 'rotateX('+x+'deg) rotateY('+y+'deg)'
-    })
-    x = Math.random()*90 - 45
-    y = Math.random()*90 - 45
+  <style id="jsbin-css">
+    .grandpa {
+      display: flex;
+      align-items: center;
+      position: absolute;
+    }
     
-    setTimeout(step, 1000)
-  }
-  step()
+    .left {
+      width: 100px;
+      height: 100px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotateX(0deg) rotateY(0deg);
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+      border-radius: 50%;
+      position: relative;
+      left: -345px;
+      top: 20px;
+    }
+    
+    .right {
+      width: 100px;
+      height: 100px;
+      background: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotateX(0deg) rotateY(0deg);
+      transform-style: preserve-3d;
+      transition: transform 0.8s;
+      border-radius: 50%;
+      position: relative;
+      left: -310px;
+      top: 20px;
+    }
+    
+    .child {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.8;
+    }
+    
+    #child1 {
+      background: red;
+      width: 60px;
+      height: 60px;
+      transform: translateZ(20px);
+    }
+    
+    #child2 {
+      background: black;
+      width: 30px;
+      height: 30px;
+      transform: translateZ(30px);
+    }
+    
+    #child3 {
+      width: 10px;
+      height: 10px;
+      background: white;
+      transform: translateZ(35px);
+    }
+  </style>
+</head>
 
-</script>
+<body>
+  <div class="grandpa">
+    <div class="back"><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492686707520&di=f69672abd001fd412741690b474d255e&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%253D580%2Fsign%3D8f83c45a7af40ad115e4c7eb672d1151%2F6b600c338744ebf89fb4975dd8f9d72a6159a78f.jpg"
+        alt=""></div>
+    <div class="parent left">
+      <div class="child" id="child1"></div>
+      <div class="child" id="child2"></div>
+      <div class="child" id="child3"></div>
+    </div>
+    <div class="parent right">
+      <div class="child" id="child1"></div>
+      <div class="child" id="child2"></div>
+      <div class="child" id="child3"></div>
+    </div>
+  </div>
+  <script id="jsbin-javascript">
+    var x = 0
+    var y = 0
+    function step() {
+      $('.parent').css({
+        transform: 'rotateX(' + x + 'deg) rotateY(' + y + 'deg)'
+      })
+      x = Math.random() * 90 - 45
+      y = Math.random() * 90 - 45
+
+      setTimeout(step, 1000)
+    }
+    step()
+
+  </script>
 </body>
+
 </html>
