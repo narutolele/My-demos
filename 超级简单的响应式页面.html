@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2017 by anonymous (http://js.jirengu.com/bunagonofa/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>welecome</title>
+<style>
+
+body{
+    margin: 0px 0px 0px 0px;
+}
+ul,ol{
+    list-style: none;
+    padding: 0px;
+}
+/**logo区**/
+.logo{
+    text-align: center;
+}
+.logo > .logo-img{
+    display: inline-block;
+    background-color:#d8d8d8;
+    border-radius: 36px; 
+    width: 72px;
+    height: 72px;   
+    margin-top: 60px;
+    
+}
+.logo > .logo-ul{
+    margin-top:28px;
+
+}
+.logo > .logo-ul > li{
+    display: inline-block;
+    background-color: #D8D8D8;
+    min-width: 128px;
+    line-height: 24px;
+    margin-left: 11px;
+    margin-right:11px; 
+    margin-bottom: 24px;
+
+}
+/**logo区结束**/
+/**介绍区**/
+.介绍{
+    background-color: #EFEFEF;
+    text-align: center;
+    padding-top: 46px;
+}
+.one-h2{
+    display: none;
+}
+.one-h2 h2{
+   padding: 0 2.75em 0 2.75em;
+}
+@media (min-width:600px){
+.one-h2{
+    display:block;
+}
+.two-h2{
+     display: none;
+}
+}
+.介绍 h2{
+    display: inline-block;
+    background: #D8D8D8;
+    border-radius:14px;
+    min-width: 200px;
+    line-height: 40px;
+    margin: 10px 0 10px 0;
+}
+.介绍 > .介绍段落{
+    padding:16px 0 34px 0; 
+}
+.介绍段落 > p{
+    background-color: #e8e8e8;
+    border-radius: 14px;
+    max-width:250px;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px; 
+}
+@media (min-width:600px){
+.介绍段落 > p{
+    max-width: none;
+    margin-right: 52px;
+    margin-left: 52px;
+}
+}
+/**介绍区结束**/
+/**描述区**/
+.描述{
+margin-left: 16px;
+margin-right: 16px;
+display: block;
+}
+.描述 > ol{
+margin-top: 42px;
+}
+@media (min-width:600px) {
+   .描述 > ol{
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+   } 
+   .描述 >ol>li{
+       width: calc(50% - 16px);
+     box-sizing: border-box;
+}
+}
+@media (min-width:1000px) {
+   .描述 >ol>li{
+       width: calc(33.333333% - 16px);
+     box-sizing: border-box;
+}
+}
+@media (min-width:1200px) {
+   .描述 >ol{
+max-width: 928px;
+margin-left: auto;
+margin-right: auto;
+}
+}
+.描述内容{
+margin-top: 32px;
+}
+.描述内容 .img{
+background: #d8d8d8;
+border-radius: 4px;
+height: 180px;/**如果这真的是一个图片,就不需要人添加宽高度了,会自己按比例算出来**/
+}
+.描述内容 h3{
+background:#bcbcbc;
+border-radius:4px;
+max-width: 204px;
+line-height: 24px;
+margin:20px 0 14px 0; 
+}
+.描述内容 p{
+   background:#ececec;
+   border-radius:4px;
+   line-height: 16px;
+   font-size: 14px;
+}
+/**描述区结束**/
+</style>
+</head>
+
+<body>
+    <sytle>
+        
+    </sytle>
+    <div class="logo">
+        <div class="logo-img"></div>
+        <ul class="logo-ul">
+            <li>嗷嗷嗷嗷</li>
+            <li>汪汪汪汪</li>
+            <li>喵喵喵喵</li>
+            <li>嗯啊嗯啊</li>
+        </ul>
+    </div>
+    </div>
+    <div class="介绍">
+        <div class="one-h2">
+        <h2>我们是一个浑身难受的企业</h2>
+        </div>
+        <div class="two-h2"> 
+        <h2>这是一个h2标题</h2>
+        <h2>这是一个h2标题</h2>
+        </div>
+    <div class="介绍段落">
+        <p>这是一个p</p>
+        <p>p again</p>
+    </div>
+     </div>
+    <div class="描述">
+        <ol>
+            <li>
+                <div class="描述内容">
+                    <div class="img">假装这是一个图片</div>
+                    <h3>御坂美琴</h3>
+                    <p>你指尖跃动的电光，是我此生不变的信仰。</p>
+                </div>
+            </li>
+            <li>
+                <div class="描述内容">
+                    <div class="img">假装这是一个图片</div>
+                    <h3>御坂美琴</h3>
+                    <p>你指尖跃动的电光，是我此生不变的信仰。</p>
+                </div>
+            </li>
+            <li>
+                <div class="描述内容">
+                    <div class="img">假装这是一个图片</div>
+                    <h3>御坂美琴</h3>
+                    <p>你指尖跃动的电光，是我此生不变的信仰。</p>
+                </div>
+            </li>
+            <li>
+                <div class="描述内容">
+                    <div class="img">假装这是一个图片</div>
+                    <h3>御坂美琴</h3>
+                    <p>你指尖跃动的电光，是我此生不变的信仰。</p>
+                </div>
+            </li>
+            <li>
+                <div class="描述内容">
+                    <div class="img">假装这是一个图片</div>
+                    <h3>御坂美琴</h3>
+                    <p>你指尖跃动的电光，是我此生不变的信仰。</p>
+                </div>
+            </li>
+            <li>
+                <div class="描述内容">
+                    <div class="img">假装这是一个图片</div>
+                    <h3>御坂美琴</h3>
+                    <p>你指尖跃动的电光，是我此生不变的信仰。</p>
+                </div>
+            </li>
+            <li>
+                <div class="描述内容">
+                    <div class="img">假装这是一个图片</div>
+                    <h3>御坂美琴</h3>
+                    <p>你指尖跃动的电光，是我此生不变的信仰。</p>
+                </div>
+            </li>
+            <li>
+                <div class="描述内容">
+                    <div class="img">假装这是一个图片</div>
+                    <h3>御坂美琴</h3>
+                    <p>你指尖跃动的电光，是我此生不变的信仰。</p>
+                </div>
+            </li>
+            <li>
+                <div class="描述内容">
+                    <div class="img">假装这是一个图片</div>
+                    <h3>御坂美琴</h3>
+                    <p>你指尖跃动的电光，是我此生不变的信仰。</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>

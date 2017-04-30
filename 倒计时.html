@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2017 by anonymous (http://js.jirengu.com/buyolafunu/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+body{
+	display: flex;
+  	justify-content: center;
+}
+.fff{
+   width:500px;
+   height:500px;
+   border: 0px solid red;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color:#456587;
+}
+#timeLeft{
+  font-size:500%;
+  color:#ECF2FA;
+  font-family: cursive;
+}
+#start{
+  background-color: #008CBA; 
+    border: 1px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+}#stop{
+  background-color: #f44336; 
+    border: 1px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-top：20px;
+}
+</style>
+</head>
+<body>
+<div class="fff">
+  <div class="time"><span id=timeLeft>02:00:00</span>  </div> 
+  <div>    
+    <button id=start>开始倒计时</button>
+    <button id=stop>暂停倒计时</button>
+  </div>
+</div>
+
+  
+<script id="jsbin-javascript">
+var button = document.querySelector('#start')
+var stop1 = document.querySelector('#stop')
+var total = 2 * 3600 
+button.addEventListener('click', function(){
+  var id = setInterval(function(){
+    if(total <= 0){
+      clearInterval(id)
+    }
+    total -= 1
+
+    stop1.addEventListener('click',function(){
+    clearInterval(id)
+})
+    var hour = parseInt(total / 3600,10)
+    var minute = parseInt((total - hour * 3600) / 60)
+    var second = total - hour * 3600 - minute * 60
+
+    
+    timeLeft.innerText = `${hour}:${minute}:${second}`
+  },1000)
+})
+
+
+
+</script>
+</body>
+</html>

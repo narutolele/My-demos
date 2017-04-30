@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2017 by anonymous (http://js.jirengu.com/zajibizipo/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+    img{
+      max-width: 200px;
+      max-height: 200px;
+    }
+    .a{
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid green;
+      
+    }
+</style>
+</head>
+<body>
+<div class="a">
+  <img        data-src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1491715285318&di=0c594ac71db7a2971b60c8a0cc785848&imgtype=0&src=http%3A%2F%2Fi.zeze.com%2Fattachment%2Fforum%2F201506%2F30%2F205501q2dkh3ddgdhkdhmo.png"
+src="http://i2.muimg.com/567571/7dea2a43703535ab.png"
+>
+</div>
+  <script>
+ var allimg = document.getElementsByTagName('img')
+var img = allimg[0]
+var url = img.getAttribute('data-src')
+console.log(url)
+var tempimg = document.createElement('img')
+tempimg.src = url
+tempimg.onload = function(){
+  img.src = url; 
+}
+  </script>
+</body>
+</html>
